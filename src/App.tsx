@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ToastProvider from './Components/Toast/Toast.provider';
+import { Dashboard } from './Components/Dashboard';
+import { GlobalStyles } from './Components/Toast/Toast.styles';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToastProvider>
+        <GlobalStyles />
+        <Dashboard />
+      </ToastProvider>
     </div>
   );
 }
